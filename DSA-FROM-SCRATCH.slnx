@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DSA.Structures/DSA.Structures.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DSA.Tests/DSA.Tests.csproj" />
+  </Folder>
+</Solution>
