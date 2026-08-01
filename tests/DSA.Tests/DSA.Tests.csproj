@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\DSA.Structures\DSA.Structures.csproj" />
+    <ProjectReference Include="..\..\src\DSA.Algorithms\DSA.Algorithms.csproj" />
   </ItemGroup>
 
 </Project>

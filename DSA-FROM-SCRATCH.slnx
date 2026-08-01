@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/DSA.Algorithms/DSA.Algorithms.csproj" />
     <Project Path="src/DSA.Structures/DSA.Structures.csproj" />
   </Folder>
   <Folder Name="/tests/">
