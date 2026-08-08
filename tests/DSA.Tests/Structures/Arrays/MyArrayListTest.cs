@@ -1,6 +1,6 @@
 using DSA.Structures.Linear;
 
-namespace DSA.Tests.Linear;
+namespace DSA.Tests.Structures.Arrays;
 
 public class MyArrayListTests
 {
