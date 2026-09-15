@@ -7,15 +7,15 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        var rectangularArray = RectangularArray.GetRectangularArray();
+        var prefixSumArray = PrefixSum.BuildPrefixSum(new int[] { 1, 2, 3, 4, 5, });
 
-        for (int i = 0; i < rectangularArray.GetLength(0); i++)
+        foreach (var array in prefixSumArray)
         {
-            for (int j = 0; j < rectangularArray.GetLength(1); j++)
-            {
-                Console.Write(rectangularArray[i, j] + " ");
-            }
-            Console.WriteLine();
+            Console.Write(array + " ");
         }
+        Console.WriteLine();
+
+        var rangeSum = PrefixSum.GetRangeSum(prefixSumArray, 1, 3);
+        Console.WriteLine("Range sum: " + rangeSum);
     }
 }
