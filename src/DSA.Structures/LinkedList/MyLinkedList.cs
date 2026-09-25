@@ -131,6 +131,34 @@ public class MyLinkedList<T>
             return GetNodeAt(index).Data;
         }
     }
+
+    public bool Contains(T value)
+    {
+
+        var node = _head;
+        while (node !=null )
+        {
+            if(Equals(node.Data, value)) return true;
+            node = node.Next;
+        }
+        
+        return false;
+    }
+
+    public  T[] ToArray()
+    {
+        T[] array = new T[_count];
+        var node = _head;
+        var countIndex = 0;
+
+        while (node != null)
+        {
+            array[countIndex] = node.Data;
+            node = node.Next;
+            countIndex++;
+        }
+        return array;
+    }
     
     private class Node(T data, Node? next = null)
     {

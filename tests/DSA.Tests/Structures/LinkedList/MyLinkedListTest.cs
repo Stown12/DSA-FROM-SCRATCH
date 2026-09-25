@@ -149,4 +149,69 @@ public class MyLinkedListTest
         // Act and Arrange
         Assert.Throws<ArgumentOutOfRangeException>(() => linkedList.RemoveAt(-1));
     }
+
+    [Fact]
+    public void Contains_ExistingValue_True()
+    {
+        // Arrange
+        var linkedList = new MyLinkedList<int>();
+        linkedList.AddFirst(1);
+        linkedList.AddLast(2);
+        linkedList.AddLast(3);
+        
+        // Act and Assert
+        Assert.True(linkedList.Contains(3)); 
+    }
+    
+    [Fact]
+    public void Contains_NotExistingValue_False()
+    {
+        // Arrange
+        var linkedList = new MyLinkedList<int>();
+        linkedList.AddLast(1);
+        
+        // Act and Assert
+        Assert.False(linkedList.Contains(4));
+        
+    }
+
+    [Fact]
+    public void Contains_EmptyList_False()
+    {
+        // Arrange
+        var linkedList = new MyLinkedList<int>();
+        
+        // Act and Assert
+        
+        Assert.False(linkedList.Contains(0));
+    }
+
+    [Fact]
+    public void ToArray_ListWithElements_ArrayWithElements()
+    {
+        // Arrange
+        var linkedList = new MyLinkedList<int>();
+        linkedList.AddFirst(1);
+        linkedList.AddLast(2);
+        linkedList.AddLast(3);
+        
+        // Act
+        var listToArray = linkedList.ToArray();
+        
+        // Assert
+        Assert.Equal([1,2,3], listToArray);
+    }
+
+    [Fact]
+    public void ToArray_EmptyList_ArrayWithoutElements()
+    {
+        // Arrange
+        var linkedList = new MyLinkedList<int>();
+        
+        // Act
+        var listToArray = linkedList.ToArray();
+        
+        // Assert
+        Assert.Empty(listToArray);
+    }
 }
